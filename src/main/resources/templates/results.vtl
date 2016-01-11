@@ -7,3 +7,15 @@
 #else
   <p>Your triangle is not a valid triangle, try some new side values.</p>
 #end
+
+<div class="output">
+  #if ($myTriangle.isEquilateral())
+    <p>Your triangle is equilateral.</p>
+  #elseif ($myTriangle.isIsosceles())
+    <p>Your triangle is isosceles.</p>
+  #elseif ($myTriangle.isScalene())
+    <p>Your triangle is scalene.</p>
+  #else
+    <p>Something's wrong with the code! This should never appear.</p>
+  #end
+</div>

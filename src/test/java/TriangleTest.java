@@ -23,14 +23,26 @@ public class TriangleTest {
 
   @Test
   public void isATriangle_knowsIfTriangleNotValid_false() {
-    Triangle testTriangle = new Triangle (2, 2, 8);
+    Triangle testTriangle = new Triangle(2, 2, 8);
     assertEquals(false, testTriangle.isATriangle());
   }
 
   @Test
   public void isATriangle_knowsIfTriangleIsValid_true() {
-    Triangle testTriangle = new Triangle (3, 4, 5);
+    Triangle testTriangle = new Triangle(3, 4, 5);
     assertEquals(true, testTriangle.isATriangle());
+  }
+
+  @Test
+  public void isEquilateral_knowsIfTriangleEquilateral_true() {
+    Triangle testTriangle = new Triangle(4, 4, 4);
+    assertEquals(true, testTriangle.isEquilateral());
+  }
+
+  @Test
+  public void isEquilateral_knowsIfTriangleEquilateral_false() {
+    Triangle testTriangle = new Triangle(3, 4, 5);
+    assertEquals(false, testTriangle.isEquilateral());
   }
 
 }

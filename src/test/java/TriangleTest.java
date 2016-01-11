@@ -22,7 +22,7 @@ public class TriangleTest {
   }
 
   @Test
-  public void isATriangle_knowsIfTriangleNotValid_false() {
+  public void isAValidTriangle_knowsIfTriangleNotValid_false() {
     Triangle testTriangle = new Triangle(2, 2, 8);
     assertEquals(false, testTriangle.isAValidTriangle());
   }
@@ -73,6 +73,12 @@ public class TriangleTest {
   public void isIsosceles_knowsIfScaleneTriangleIsosceles_false() {
     Triangle testTriangle = new Triangle(3, 4, 5);
     assertEquals(false, testTriangle.isIsosceles());
+  }
+
+  @Test
+  public void isAValidTriangle_ifNegativeSide_false() {
+    Triangle testTriangle = new Triangle(3, -4, 5);
+    assertEquals(false, testTriangle.isAValidTriangle());
   }
 
 

@@ -41,4 +41,12 @@ public class Triangle {
     }
   }
 
+  public boolean isScalene() {
+    if (mSide1 != mSide2 && mSide1 != mSide3 && mSide2 != mSide3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }

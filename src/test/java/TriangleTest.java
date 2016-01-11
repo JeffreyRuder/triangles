@@ -45,4 +45,16 @@ public class TriangleTest {
     assertEquals(false, testTriangle.isEquilateral());
   }
 
+  @Test
+  public void isScalene_knowsIfTriangleScalene_true() {
+    Triangle testTriangle = new Triangle(3, 4, 5);
+    assertEquals(true, testTriangle.isScalene());
+  }
+
+  @Test
+  public void isScalene_knowsIfTriangleScalene_false() {
+    Triangle testTriangle = new Triangle(4, 4, 4);
+    assertEquals(false, testTriangle.isScalene());
+  }
+
 }

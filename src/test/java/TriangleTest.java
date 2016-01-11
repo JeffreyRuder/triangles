@@ -24,13 +24,13 @@ public class TriangleTest {
   @Test
   public void isATriangle_knowsIfTriangleNotValid_false() {
     Triangle testTriangle = new Triangle(2, 2, 8);
-    assertEquals(false, testTriangle.isATriangle());
+    assertEquals(false, testTriangle.isAValidTriangle());
   }
 
   @Test
   public void isATriangle_knowsIfTriangleIsValid_true() {
     Triangle testTriangle = new Triangle(3, 4, 5);
-    assertEquals(true, testTriangle.isATriangle());
+    assertEquals(true, testTriangle.isAValidTriangle());
   }
 
   @Test

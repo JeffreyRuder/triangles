@@ -22,4 +22,24 @@ public class IntegrationTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Triangle Checker");
   }
+
+  @Test
+  public void triangleTestIsATriangle() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("3");
+    fill("#side2").with("4");
+    fill("#side3").with("5");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle is a valid triangle!");
+  }
+
+  @Test
+  public void triangleTestIsATriangle_false() {
+    goTo("http://localhost:4567/");
+    fill("#side1").with("2");
+    fill("#side2").with("2");
+    fill("#side3").with("8");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your triangle is not a valid triangle");
+  }
 }

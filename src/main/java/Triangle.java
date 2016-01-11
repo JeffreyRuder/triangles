@@ -49,4 +49,16 @@ public class Triangle {
     }
   }
 
+  public boolean isIsosceles() {
+    if (mSide1 == mSide2 && mSide1 != mSide3) {
+      return true;
+    } else if (mSide1 == mSide3 && mSide1 != mSide2) {
+      return true;
+    } else if (mSide2 == mSide3 && mSide2 != mSide1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }

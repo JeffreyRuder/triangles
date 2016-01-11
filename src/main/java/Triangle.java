@@ -21,4 +21,16 @@ public class Triangle {
     return mSide3;
   }
 
+  public boolean isATriangle() {
+    if (mSide1 + mSide2 < mSide3) {
+      return false;
+    } else if (mSide2 + mSide3 < mSide1) {
+      return false;
+    } else if (mSide3 + mSide1 < mSide2) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 }

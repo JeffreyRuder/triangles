@@ -2,8 +2,6 @@
 
 #### January 11, 2016
 
-#### By  and Jeffrey Ruder
-
 ## Description
 
 Checks the sides of a triangle to determine if it is valid, and if so, what type of triangle it is.
